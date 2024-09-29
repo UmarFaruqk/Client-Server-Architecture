@@ -16,6 +16,10 @@ To demonstrate a basic client-server MySQL RDBMS, follow the below instructions:
 6. Open the inbound rule on *mysql server* and add TCP port 3306 and for extra security do not allow all IP addresses to reach your 'mysql server' - allow access only to the specific local IP address of your 'mysql client'. ![reference image](/Pictures/pic3.PNG)
 7. Configure MySQL server to allow connection from remote hosts using this command *sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf* replace *bind.address* with *0.0.0.0*
 8. From mysql client Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action.
-9. Check that you have successfully connected to a remote MySQL server and can perform SQL queries using *Show databases;* and you should see this ![reference image](/Pictures/pic5.PNG)
+9. To do that we first of all create a new user database and grant all access to it ![reference image](/Pictures/pic6.PNG) then exit the mysql console 
+10. Now log in back into mysql console but this time using the user database you created with the password and if everything is okay you should see this ![reference image](/Pictures/pic7.PNG) 
+11. Then next step is to access your just created user database in your *mysql server* shell using your *mysql client* public IP and you should see this ![reference image](/Pictures/pic8.PNG)
+12. I also went ahead to access *mysql client* database using mysql workbench and thsi was the result of what I got ![reference image](/Pictures/pic9.PNG) 
+13. I finally accessed mysql user just like I did in the terminal ![reference image](/Pictures/pic10.PNG) 
 
 ## I HOPE YOU UNDERSTAND THE STEP BY STEP PROCESS WE USED IN CARRYING OUT THIS TASK
