@@ -13,7 +13,7 @@ To demonstrate a basic client-server MySQL RDBMS, follow the below instructions:
 3. server B name - *mysql client*
 4. Install MySQL Server on Both servers that's after you've successfully connected them to your Terminal ![reference image](/Pictures/pic2.PNG)
 5. By default, both of your EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses. Use *mysql server's* local IP address to connect from *mysql client*.
-6. Open the inbound rule on *mysql server* and add TCP port 3306 and for extra security do not allow all IP addresses to reach your 'mysql server' - allow access only to the specific local IP address of your 'mysql client'. ![reference image](/Pictures/pic3.PNG)
+6. Open the inbound rule on both servers and add TCP port 3306 and your localhost IP, for extra security do not allow all IP addresses to reach your servers - allow access only to the specific local IP address of your 'mysql client' and 'mysql server'. ![reference image](/Pictures/pic3.PNG)
 7. Configure MySQL server to allow connection from remote hosts using this command *sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf* replace *bind.address* with *0.0.0.0*
 8. From mysql client Linux Server connect remotely to mysql server Database Engine without using SSH. You must use the mysql utility to perform this action.
 9. To do that we first of all create a new user database and grant all access to it ![reference image](/Pictures/pic6.PNG) then exit the mysql console 
